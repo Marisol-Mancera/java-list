@@ -8,11 +8,15 @@ public class DaysOfWeekManager {
 
     public DaysOfWeekManager () {
         this.daysOfWeek = new ArrayList<>();
+        //this
     }
 
     public List<String> getDaysOfWeek(){
         return this.daysOfWeek;
     }
 
-
+    public void addDayOfWeek_AddsDayToList(String day){
+        this.daysOfWeek.add(day);
+    }
+    
 }
