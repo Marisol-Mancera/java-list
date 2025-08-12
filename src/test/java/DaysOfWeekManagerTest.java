@@ -2,6 +2,7 @@
 import static org.junit.jupiter.api.Assertions.assertFalse;
 import static org.junit.jupiter.api.Assertions.assertNotNull;
 import static org.junit.jupiter.api.Assertions.assertTrue;
+import static org.junit.jupiter.api.Assertions.assertEquals;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
@@ -42,6 +43,13 @@ public class DaysOfWeekManagerTest {
         assertTrue(manager.getDaysOfWeek().contains(dayToAdd));
 
     }
-}
 
+    @Test
+    void getListOfDaysOfWeek_ReturnsListOfDays() {
 
+        int listLength = manager.getListLength(); //esto debe fallar porque no existe el método getListLenght
+
+        assertEquals(0, listLength); //esto también fallará porque la lista está vacía
+
+        }
+    }

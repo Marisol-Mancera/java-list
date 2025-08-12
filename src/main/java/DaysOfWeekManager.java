@@ -18,5 +18,10 @@ public class DaysOfWeekManager {
     public void addDayOfWeek_AddsDayToList(String day){
         this.daysOfWeek.add(day);
     }
+
+
+    public int getListLength() {
+        return daysOfWeek.size();
+    }
     
 }
