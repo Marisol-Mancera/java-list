@@ -27,5 +27,9 @@ public class DaysOfWeekManager {
     public void removeDay(String day){
         this.daysOfWeek.remove(day);
     }
+
+    public String getDay (int index) {
+        return this.daysOfWeek.get(index);
+    }
     
 }

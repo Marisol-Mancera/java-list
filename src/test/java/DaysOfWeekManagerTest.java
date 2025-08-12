@@ -57,5 +57,16 @@ public class DaysOfWeekManagerTest {
     void removeDay_removesDayFromList(){
         manager.removeDay("Martes"); 
     }
+
+    @Test
+    void getDay_ReturnsCorrectDay() {
+        manager.addDayOfWeek_AddsDayToList("Lunes");
+        manager.addDayOfWeek_AddsDayToList("Martes");
+
+        String retrieveDay = manager.getDay(0);
+        
+        assertEquals("Lunes", retrieveDay);
+    }
+        
 }
     
