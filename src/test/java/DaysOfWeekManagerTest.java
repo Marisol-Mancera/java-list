@@ -1,4 +1,3 @@
-
 import static org.junit.jupiter.api.Assertions.assertFalse;
 import static org.junit.jupiter.api.Assertions.assertNotNull;
 import static org.junit.jupiter.api.Assertions.assertTrue;
@@ -52,4 +51,11 @@ public class DaysOfWeekManagerTest {
         assertEquals(0, listLength); //esto también fallará porque la lista está vacía
 
         }
+    
+
+    @Test
+    void removeDay_removesDayFromList(){
+        manager.removeDay("Martes"); 
     }
+}
+    
