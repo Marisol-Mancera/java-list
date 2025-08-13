@@ -1,4 +1,5 @@
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.List;
 
 public class DaysOfWeekManager {
@@ -34,6 +35,10 @@ public class DaysOfWeekManager {
 
     public boolean checkIfDayExists(String day) {
         return this.daysOfWeek.contains(day);
+    }
+
+    public void sortDayAlphabetically(){
+        Collections.sort(this.daysOfWeek);
     }
     
 }

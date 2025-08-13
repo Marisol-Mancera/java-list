@@ -1,9 +1,12 @@
 import static org.junit.jupiter.api.Assertions.assertFalse;
+import static org.junit.jupiter.api.Assertions.assertLinesMatch;
 import static org.junit.jupiter.api.Assertions.assertNotNull;
 import static org.junit.jupiter.api.Assertions.assertTrue;
 import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertIterableEquals;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
+import java.util.List;
 
 
 
@@ -76,6 +79,16 @@ public class DaysOfWeekManagerTest {
 
         assertTrue(manager.getDaysOfWeek().contains("jueves"));
     }
-        
+
+    @Test
+    void sortDaysAlphabetically_sortsDaysInAlphabeticalOrder(){
+        manager.addDayOfWeek_AddsDayToList("Martes");
+        manager.addDayOfWeek_AddsDayToList("Lunes");
+        manager.addDayOfWeek_AddsDayToList("Miércoles");
+
+        manager.sortDayAlphabetically();
+
+       assertIterableEquals(List.of("Lunes", "Martes", "Miércoles"), manager.getDaysOfWeek());
+
+    }  
 }
-    
