@@ -40,5 +40,10 @@ public class DaysOfWeekManager {
     public void sortDayAlphabetically(){
         Collections.sort(this.daysOfWeek);
     }
+
+    public boolean clearList(){
+        this.daysOfWeek.clear();
+        return this.daysOfWeek.isEmpty();
+    }
     
 }

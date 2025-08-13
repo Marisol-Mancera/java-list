@@ -91,4 +91,16 @@ public class DaysOfWeekManagerTest {
        assertIterableEquals(List.of("Lunes", "Martes", "Miércoles"), manager.getDaysOfWeek());
 
     }  
+
+    @Test
+    void clearList_clearsAllDaysFromList(){
+        manager.addDayOfWeek_AddsDayToList("Lunes");
+        manager.addDayOfWeek_AddsDayToList("Martes");
+        manager.addDayOfWeek_AddsDayToList("Miércoles");
+
+        manager.clearList();
+
+        assertTrue(manager.getDaysOfWeek().isEmpty());
+        assertEquals(0, manager.getListLength());
+    }
 }
