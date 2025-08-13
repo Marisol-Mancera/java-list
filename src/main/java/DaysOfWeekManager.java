@@ -3,20 +3,18 @@ import java.util.Collections;
 import java.util.List;
 
 public class DaysOfWeekManager {
-    //@suppress... esta es una anotación que le dice al compilador que ignore la advertencia que salía antes
-    @SuppressWarnings("FieldMayBeFinal")
-    private List<String> daysOfWeek;
+    private final List<String> daysOfWeek;
 
     public DaysOfWeekManager () {
         this.daysOfWeek = new ArrayList<>();
-        //this
+        
     }
 
     public List<String> getDaysOfWeek(){
-        return this.daysOfWeek;
+        return new ArrayList<>(this.daysOfWeek);
     }
 
-    public void addDayOfWeek_AddsDayToList(String day){
+    public void addDayOfWeek(String day){
         this.daysOfWeek.add(day);
     }
 
@@ -37,13 +35,12 @@ public class DaysOfWeekManager {
         return this.daysOfWeek.contains(day);
     }
 
-    public void sortDayAlphabetically(){
+    public void sortDaysAlphabetically(){
         Collections.sort(this.daysOfWeek);
     }
 
-    public boolean clearList(){
+    public void clear(){
         this.daysOfWeek.clear();
-        return this.daysOfWeek.isEmpty();
     }
     
 }
