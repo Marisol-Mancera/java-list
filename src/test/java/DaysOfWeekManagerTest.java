@@ -67,6 +67,15 @@ public class DaysOfWeekManagerTest {
         
         assertEquals("Lunes", retrieveDay);
     }
+
+    @Test
+    void checkIfDayExists_ReturnsTrueIfDayExists() {
+       
+       manager.addDayOfWeek_AddsDayToList("jueves");
+       boolean exists = manager.checkIfDayExists("jueves");
+
+        assertTrue(manager.getDaysOfWeek().contains("jueves"));
+    }
         
 }
     

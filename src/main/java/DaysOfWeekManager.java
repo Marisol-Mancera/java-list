@@ -31,5 +31,9 @@ public class DaysOfWeekManager {
     public String getDay (int index) {
         return this.daysOfWeek.get(index);
     }
+
+    public boolean checkIfDayExists(String day) {
+        return this.daysOfWeek.contains(day);
+    }
     
 }
